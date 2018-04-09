@@ -90,6 +90,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9447B297207BD6C4009A184E /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
 		947430D4207837CA00C81A4B = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +122,7 @@
 			children = (
 				94CB9A7C20783DBC00F6BC1E /* Algorithms */,
 				94CB9A7920783D8F00F6BC1E /* AppCode */,
-				94CB9A7D20783DC400F6BC1E /* Data Structures */,
+				9447B297207BD6C4009A184E /* Data Structures */,
 				94CB9A7A20783D9A00F6BC1E /* Resources */,
 				94CB9A7B20783DAB00F6BC1E /* Supporting Files */,
 			);
@@ -165,13 +172,6 @@
 				94CB9A7F207842B000F6BC1E /* BubbleSort.swift */,
 			);
 			path = Algorithms;
-			sourceTree = "<group>";
-		};
-		94CB9A7D20783DC400F6BC1E /* Data Structures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 		94CB9A7E20783DD000F6BC1E /* Supporting Files */ = {
