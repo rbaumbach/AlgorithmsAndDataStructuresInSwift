@@ -19,12 +19,25 @@ class BubbleSortSpec: QuickSpec {
         
         
         describe("#inPlaceSort(array:)") {
-            beforeEach {
+            it("sorts the given array of integers") {
                 subject.inPlaceSort(array: &testArray!)
+                expect(testArray).to(equal([0, 1, 2, 3, 4, 5]))
             }
             
-            it("sorts the given array of integers") {
-                expect(testArray).to(equal([0, 1, 2, 3, 4, 5]))
+            describe("single element array") {
+                it("doesn't blow up") {
+                    var singleElementArray = [42]
+                    expect(subject.inPlaceSort(array: &singleElementArray)).toNot(raiseException())
+                    expect(singleElementArray).to(equal([42]))
+                }
+            }
+            
+            describe("empty array") {
+                it("doesn't blow up") {
+                    var emptyArray: [Int] = []
+                    expect(subject.inPlaceSort(array: &emptyArray)).toNot(raiseException())
+                    expect(emptyArray).to(equal([]))
+                }
             }
         }
         
@@ -32,12 +45,25 @@ class BubbleSortSpec: QuickSpec {
         // more "Swifty" but requires the usage of the Swift reversed() function.
         
         describe("#swiftyInPlaceSort(array:)") {
-            beforeEach {
-                subject.inPlaceSort(array: &testArray!)
+            it("sorts the given array of integers") {
+                subject.swiftyInPlaceSort(array: &testArray!)
+                expect(testArray).to(equal([0, 1, 2, 3, 4, 5]))
             }
             
-            it("sorts the given array of integers") {
-                expect(testArray).to(equal([0, 1, 2, 3, 4, 5]))
+            describe("single element array") {
+                it("doesn't blow up") {
+                    var singleElementArray = [42]
+                    expect(subject.swiftyInPlaceSort(array: &singleElementArray)).toNot(raiseException())
+                    expect(singleElementArray).to(equal([42]))
+                }
+            }
+
+            describe("empty array") {
+                it("doesn't blow up") {
+                    var emptyArray: [Int] = []
+                    expect(subject.swiftyInPlaceSort(array: &emptyArray)).toNot(raiseException())
+                    expect(emptyArray).to(equal([]))
+                }
             }
         }
     }

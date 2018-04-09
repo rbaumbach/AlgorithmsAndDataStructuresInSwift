@@ -12,7 +12,11 @@ struct BubbleSort {
     }
     
     func swiftyInPlaceSort(array: inout [Int]) {
-        for endIndex in (0..<array.count).reversed() {
+        guard array.isEmpty == false else {
+            return
+        }
+        
+        for endIndex in (1..<array.count).reversed() {
             completeSingleBubbleUp(array: &array, endIndexOfUnsortedItems: endIndex)
         }
     }
