@@ -1,6 +1,6 @@
 import Foundation
 
-class SinglyLinkedList {
+class SinglyLinkedList: LinkedList {
     // MARK: - Private Properties
     
     private var head: SingleNode?
@@ -37,11 +37,15 @@ class SinglyLinkedList {
     }
     
     func addToBack(item: Int) {
-        if let tailNode = findTailNode() {
-            tailNode.nextNode = SingleNode(item: item)
-        } else {
+        if head == nil {
             head = SingleNode(item: item)
+            
+            return
         }
+        
+        let tailNode = findTailNode()
+        
+        tailNode?.nextNode = SingleNode(item: item)
     }
     
     func removeFromBack() -> Int? {
@@ -63,18 +67,14 @@ class SinglyLinkedList {
     
     // MARK: - Private Methods
     
-    private func findTailNode() -> SingleNode? {
-        guard let head = head else {
-            return nil
-        }
-
+    private func findTailNode() -> SingleNode! {
         var currentNode: SingleNode? = head
 
         while currentNode?.nextNode != nil {
             currentNode = currentNode?.nextNode
         }
 
-        return currentNode
+        return currentNode!
     }
     
     private func findNodeImmediatelyBeforeTailNode() -> SingleNode {
