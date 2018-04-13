@@ -174,5 +174,57 @@ class SinglyLinkedListSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("#toArray()") {
+            var generatedArray: [Int]!
+            
+            beforeEach {
+                subject.addToFront(item: 0)
+                subject.addToFront(item: 1)
+                subject.addToFront(item: 2)
+                subject.addToFront(item: 3)
+                subject.addToFront(item: 4)
+            }
+            
+            context("isAscending == false (default)") {
+                beforeEach {
+                    generatedArray = subject.toArray()
+                }
+                
+                it("generates an array from head -> nil") {
+                    expect(generatedArray).to(equal([4, 3, 2, 1, 0]))
+                }
+            }
+            
+            context("isAscending == true") {
+                beforeEach {
+                    generatedArray = subject.toArray(isAscending: true)
+                }
+                
+                it("generates an array from nil -> head") {
+                    expect(generatedArray).to(equal([0, 1, 2, 3, 4]))
+                }
+            }
+        }
+        
+        describe("#forEach(_:)") {
+            var items: [Int]!
+            
+            beforeEach {
+                subject.addToFront(item: 0)
+                subject.addToFront(item: 1)
+                subject.addToFront(item: 2)
+                
+                items = []
+                
+                subject.forEach { item in
+                    items.append(item)
+                }
+            }
+            
+            it("traverses the list and passes the node.item as a parameter to it's closure parameter") {
+                expect(items).to(equal([2, 1, 0]))
+            }
+        }
     }
 }

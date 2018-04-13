@@ -45,7 +45,7 @@ class SinglyLinkedList: LinkedList {
         
         let tailNode = findTailNode()
         
-        tailNode?.nextNode = SingleNode(item: item)
+        tailNode.nextNode = SingleNode(item: item)
     }
     
     func removeFromBack() -> Int? {
@@ -65,9 +65,41 @@ class SinglyLinkedList: LinkedList {
         return oldTailNode?.item
     }
     
+    func toArray(isAscending: Bool = false) -> [Int] {
+        guard head != nil else {
+            return []
+        }
+        
+        var generatedArray: [Int] = []
+        
+        forEach { item in
+            generatedArray.append(item)
+        }
+
+        if isAscending {
+            generatedArray.reverse()
+        }
+        
+        return generatedArray
+    }
+    
+    func forEach(_ body: (Int) -> Void) {
+        guard let head = head else {
+            return
+        }
+        
+        var currentNode: SingleNode? = head
+        
+        while currentNode != nil {
+            body(currentNode!.item)
+            
+            currentNode = currentNode?.nextNode
+        }
+    }
+    
     // MARK: - Private Methods
     
-    private func findTailNode() -> SingleNode! {
+    private func findTailNode() -> SingleNode {
         var currentNode: SingleNode? = head
 
         while currentNode?.nextNode != nil {
