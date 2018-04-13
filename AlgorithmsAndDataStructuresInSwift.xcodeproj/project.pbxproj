@@ -30,6 +30,8 @@
 		94CB9AA120813A2100F6BC1E /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AA020813A2100F6BC1E /* StackSpec.swift */; };
 		94CB9AA320815E8F00F6BC1E /* GenericSingleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AA220815E8F00F6BC1E /* GenericSingleNode.swift */; };
 		94CB9AA520815EF600F6BC1E /* GenericSingleNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AA420815EF600F6BC1E /* GenericSingleNodeSpec.swift */; };
+		94CB9AA72081619500F6BC1E /* GenericSinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AA62081619500F6BC1E /* GenericSinglyLinkedList.swift */; };
+		94CB9AAB208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AAA208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift */; };
 		A66B2E5CBDE9B59914CD07A9 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */; };
 		C590BA6BEE1DA77B146BC6D3 /* Pods_AlgorithmsAndDataStructuresInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065D38C1F3BC485C7B9F927 /* Pods_AlgorithmsAndDataStructuresInSwift.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		94CB9AA020813A2100F6BC1E /* StackSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		94CB9AA220815E8F00F6BC1E /* GenericSingleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSingleNode.swift; sourceTree = "<group>"; };
 		94CB9AA420815EF600F6BC1E /* GenericSingleNodeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSingleNodeSpec.swift; sourceTree = "<group>"; };
+		94CB9AA62081619500F6BC1E /* GenericSinglyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSinglyLinkedList.swift; sourceTree = "<group>"; };
+		94CB9AAA208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSinglyLinkedListSpec.swift; sourceTree = "<group>"; };
 		DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED98151E623575A12B6EF542 /* Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmsAndDataStructuresInSwift/Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,7 @@
 				94CB9A91207FF29400F6BC1E /* DoubleNode.swift */,
 				94CB9A8F207FF28500F6BC1E /* DoublyLinkedList.swift */,
 				94CB9AA220815E8F00F6BC1E /* GenericSingleNode.swift */,
+				94CB9AA62081619500F6BC1E /* GenericSinglyLinkedList.swift */,
 				94CB9A8D207FF09700F6BC1E /* LinkedList.swift */,
 				94CB9A89207EC35900F6BC1E /* SingleNode.swift */,
 				94CB9A83207EC30300F6BC1E /* SinglyLinkedList.swift */,
@@ -235,10 +240,11 @@
 			children = (
 				94CB9A93207FF2A500F6BC1E /* DoubleNodeSpec.swift */,
 				94CB9A96207FF83B00F6BC1E /* DoublyLinkedListSpec.swift */,
+				94CB9AA420815EF600F6BC1E /* GenericSingleNodeSpec.swift */,
+				94CB9AAA208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift */,
 				94CB9A8B207EC37000F6BC1E /* SingleNodeSpec.swift */,
 				94CB9A87207EC32A00F6BC1E /* SinglyLinkedListSpec.swift */,
 				94CB9AA020813A2100F6BC1E /* StackSpec.swift */,
-				94CB9AA420815EF600F6BC1E /* GenericSingleNodeSpec.swift */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				94CB9A9F208139FE00F6BC1E /* Stack.swift in Sources */,
 				947430E1207837CA00C81A4B /* AppDelegate.swift in Sources */,
 				94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */,
+				94CB9AA72081619500F6BC1E /* GenericSinglyLinkedList.swift in Sources */,
 				94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94CB9AA520815EF600F6BC1E /* GenericSingleNodeSpec.swift in Sources */,
+				94CB9AAB208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift in Sources */,
 				94CB9A97207FF83B00F6BC1E /* DoublyLinkedListSpec.swift in Sources */,
 				94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */,
 				94CB9A88207EC32A00F6BC1E /* SinglyLinkedListSpec.swift in Sources */,
