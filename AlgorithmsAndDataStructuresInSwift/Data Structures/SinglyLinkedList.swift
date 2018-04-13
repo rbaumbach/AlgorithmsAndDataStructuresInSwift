@@ -1,9 +1,19 @@
 import Foundation
 
-class SinglyLinkedList: LinkedList {
+class SinglyLinkedList: LinkedList, CustomStringConvertible {
     // MARK: - Private Properties
     
     private var head: SingleNode?
+    
+    // MARK: - <CustomStringConvertible>
+    
+    var description: String {
+        guard head != nil else {
+            return "nil"
+        }
+        
+        return constructStringRepresentation()
+    }
     
     // MARK: - Public Methods
     
@@ -48,6 +58,14 @@ class SinglyLinkedList: LinkedList {
         tailNode.nextNode = SingleNode(item: item)
     }
     
+    func addToBackRecursively(item: Int) {
+        if let head = head {
+            addToBackRecursively(item: item, currentNode: head)
+        } else {
+            head = SingleNode(item: item)
+        }
+    }
+    
     func removeFromBack() -> Int? {
         guard let head = head else {
             return nil
@@ -63,6 +81,18 @@ class SinglyLinkedList: LinkedList {
         newTailNode.nextNode = nil
 
         return oldTailNode?.item
+    }
+    
+    func removeFromBackRecursively() -> Int? {
+        guard let head = head else {
+            return nil
+        }
+        
+        if head.nextNode == nil {
+            return head.item
+        }
+        
+        return removeFromBackRecursively(currentNode: head)
     }
     
     func toArray(isAscending: Bool = false) -> [Int] {
@@ -117,5 +147,37 @@ class SinglyLinkedList: LinkedList {
         }
 
         return currentNode!
+    }
+    
+    private func constructStringRepresentation() -> String {
+        var stringRepresentation = ""
+        
+        forEach { item in
+            stringRepresentation += "|\(item)| -> "
+        }
+        
+        stringRepresentation += "nil"
+        
+        return stringRepresentation
+    }
+
+    private func addToBackRecursively(item: Int,  currentNode: SingleNode) {
+        if currentNode.nextNode == nil {
+            currentNode.nextNode = SingleNode(item: item)
+            
+            return
+        }
+        
+        addToBackRecursively(item: item, currentNode: currentNode.nextNode!)
+    }
+    
+    private func removeFromBackRecursively(currentNode: SingleNode) -> Int {
+        if currentNode.nextNode?.nextNode == nil {
+            let tailItem = currentNode.nextNode!.item
+            
+            return tailItem
+        }
+        
+        return removeFromBackRecursively(currentNode: currentNode.nextNode!)
     }
 }

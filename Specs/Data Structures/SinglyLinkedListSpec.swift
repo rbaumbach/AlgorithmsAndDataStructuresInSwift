@@ -11,6 +11,24 @@ class SinglyLinkedListSpec: QuickSpec {
             subject = SinglyLinkedList()
         }
         
+        describe("<CustomStringConvertible>") {
+            describe("description") {
+                var output: String!
+                
+                beforeEach {
+                    subject.addToFront(item: 2)
+                    subject.addToFront(item: 1)
+                    subject.addToFront(item: 0)
+                    
+                    output = subject.description
+                }
+                it("displays the linked list all pretty and what not") {
+                    let expectedOutput = "|0| -> |1| -> |2| -> nil"
+                    expect(output).to(equal(expectedOutput))
+                }
+            }
+        }
+        
         describe("#isEmpty()") {
             describe("when subject is empty") {
                 it("returns true") {
@@ -138,6 +156,35 @@ class SinglyLinkedListSpec: QuickSpec {
             }
         }
         
+        describe("#addToBackRecursively(item:)") {
+            beforeEach {
+                subject.addToBackRecursively(item: 99)
+            }
+            
+            describe("when the list is empty") {
+                it("adds item to the subject") {
+                    expect(subject.peek()).to(equal(99))
+                }
+            }
+            
+            describe("when the list is NOT empty") {
+                beforeEach {
+                    subject.addToBackRecursively(item: 88)
+                }
+                
+                it("adds the item to the subject at the back of the linked list") {
+                    expect(subject.peek()).to(equal(99))
+                    
+                    // the easiest way to test that it's adding a node in the back of a list is to remove the item
+                    // immediately before it and then verify it's present
+                    
+                    _ = subject.removeFromFront()
+                    
+                    expect(subject.peek()).to(equal(88))
+                }
+            }
+        }
+        
         describe("#removeFromBack()") {
             var removedItem: Int!
 
@@ -168,6 +215,43 @@ class SinglyLinkedListSpec: QuickSpec {
                     subject.addToBack(item: 777)
                     
                     removedItem = subject.removeFromBack()
+                }
+                it("returns the item at the back of the linked list") {
+                    expect(removedItem).to(equal(777))
+                }
+            }
+        }
+        
+        describe("#removeFromBackRecursively()") {
+            var removedItem: Int!
+            
+            describe("when the list is empty") {
+                beforeEach {
+                    removedItem = subject.removeFromBackRecursively()
+                }
+                
+                it("returns nil") {
+                    expect(removedItem).to(beNil())
+                }
+            }
+            
+            describe("when the list has one node") {
+                beforeEach {
+                    subject.addToBack(item: 12345)
+                    
+                    removedItem = subject.removeFromBackRecursively()
+                }
+                it("returns the item at the back of the linked list") {
+                    expect(removedItem).to(equal(12345))
+                }
+            }
+            
+            describe("when the list has more than one node") {
+                beforeEach {
+                    subject.addToBack(item: 12345)
+                    subject.addToBack(item: 777)
+                    
+                    removedItem = subject.removeFromBackRecursively()
                 }
                 it("returns the item at the back of the linked list") {
                     expect(removedItem).to(equal(777))
