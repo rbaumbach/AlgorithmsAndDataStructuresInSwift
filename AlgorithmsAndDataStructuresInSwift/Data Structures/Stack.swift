@@ -1,21 +1,21 @@
 import Foundation
 
-class Stack {
+class Stack<T: Equatable> {
     // MARK: - Private Properties
     
-    private var linkedList: LinkedList = SinglyLinkedList()
+    private var linkedList = GenericSinglyLinkedList<T>()
     
     // MARK: - Public Methods
     
-    func push(item: Int) {
+    func push(item: T) {
         linkedList.addToFront(item: item)
     }
     
-    func pop() -> Int? {
+    func pop() -> T? {
         return linkedList.removeFromFront()
     }
     
-    func peek() -> Int? {
+    func peek() -> T? {
         return linkedList.peek()
     }
     
@@ -24,6 +24,6 @@ class Stack {
     }
     
     func clear() {
-        linkedList = SinglyLinkedList()
+        linkedList = GenericSinglyLinkedList<T>()
     }
 }

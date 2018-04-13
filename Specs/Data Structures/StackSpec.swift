@@ -5,10 +5,10 @@ import Nimble
 
 class StackSpec: QuickSpec {
     override func spec() {
-        var subject: Stack!
+        var subject: Stack<Int>!
         
         beforeEach {
-            subject = Stack()
+            subject = Stack<Int>()
         }
         
         describe("#push(item:)") {
