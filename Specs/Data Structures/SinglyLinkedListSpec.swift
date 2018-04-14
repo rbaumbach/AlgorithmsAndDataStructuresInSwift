@@ -23,7 +23,7 @@ class SinglyLinkedListSpec: QuickSpec {
                     output = subject.description
                 }
                 it("displays the linked list all pretty and what not") {
-                    let expectedOutput = "|0| -> |1| -> |2| -> nil"
+                    let expectedOutput = "head -> |0| -> |1| -> |2| -> nil"
                     expect(output).to(equal(expectedOutput))
                 }
             }

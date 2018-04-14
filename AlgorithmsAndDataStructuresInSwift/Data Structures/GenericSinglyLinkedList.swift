@@ -8,10 +8,6 @@ class GenericSinglyLinkedList<T: Equatable>: CustomStringConvertible {
     // MARK: - <CustomStringConvertible>
     
     var description: String {
-        guard head != nil else {
-            return "nil"
-        }
-        
         return constructStringRepresentation()
     }
     
@@ -154,7 +150,14 @@ class GenericSinglyLinkedList<T: Equatable>: CustomStringConvertible {
     }
     
     private func constructStringRepresentation() -> String {
-        var stringRepresentation = ""
+        var stringRepresentation = "head -> "
+        
+        guard head != nil else {
+            stringRepresentation += "nil"
+            
+            return stringRepresentation
+        }
+        
         
         forEach { item in
             stringRepresentation += "|\(item)| -> "
