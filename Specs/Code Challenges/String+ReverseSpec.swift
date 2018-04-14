@@ -23,9 +23,10 @@ class String_ReverseSpec: QuickSpec {
             }
         }
         
-        // TODO
-//        describe("#stackReverse()") {
-//
-//        }
+        describe("#stackReverse()") {
+            it("reverses a string") {
+                expect("junk".stackReverse()).to(equal("knuj"))
+            }
+        }
     }
 }

@@ -28,4 +28,20 @@ extension String {
             return "\(char)" + reversedString
         }
     }
+    
+    func stackReverse() -> String {
+        let stack = Stack<String>()
+        
+        for char in self {
+            stack.push(item: "\(char)")
+        }
+        
+        var reversedString = ""
+
+        while !stack.isEmpty() {
+            reversedString += stack.pop()!
+        }
+        
+        return reversedString
+    }
 }
