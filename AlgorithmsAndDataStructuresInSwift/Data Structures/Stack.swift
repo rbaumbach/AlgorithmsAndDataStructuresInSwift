@@ -1,9 +1,15 @@
 import Foundation
 
-class Stack<T: Equatable> {
+class Stack<T: Equatable>: CustomStringConvertible {
     // MARK: - Private Properties
     
     private var linkedList = GenericSinglyLinkedList<T>()
+    
+    // MARK: - <CustomStringConvertible>
+    
+    var description: String {
+        return constructStringRepresentation()
+    }
     
     // MARK: - Public Methods
     
@@ -25,5 +31,29 @@ class Stack<T: Equatable> {
     
     func clear() {
         linkedList.clear()
+    }
+    
+    func forEach(_ body: (T) -> Void) {
+        linkedList.forEach(body)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func constructStringRepresentation() -> String {
+        var stringRepresentation = "top -> "
+        
+        guard !linkedList.isEmpty() else {
+            stringRepresentation += "nil"
+            
+            return stringRepresentation
+        }
+        
+        linkedList.forEach { item in
+            stringRepresentation += "|\(item)"
+        }
+        
+        stringRepresentation += "|"
+        
+        return stringRepresentation
     }
 }

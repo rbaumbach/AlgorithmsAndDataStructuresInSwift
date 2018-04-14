@@ -11,6 +11,24 @@ class StackSpec: QuickSpec {
             subject = Stack<Int>()
         }
         
+        describe("<CustomStringConvertible>") {
+            describe("description") {
+                var output: String!
+                
+                beforeEach {
+                    subject.push(item: 0)
+                    subject.push(item: 10)
+                    subject.push(item: 20)
+                    
+                    output = subject.description
+                }
+                it("displays the linked list all pretty and what not") {
+                    let expectedOutput = "top -> |20|10|0|"
+                    expect(output).to(equal(expectedOutput))
+                }
+            }
+        }
+        
         describe("#push(item:)") {
             beforeEach {
                 subject.push(item: 99)
@@ -96,6 +114,25 @@ class StackSpec: QuickSpec {
             
             it("clears the stack") {
                 expect(subject.isEmpty()).to(beTruthy())
+            }
+        }
+        
+        describe("#forEach(_:)") {
+            var items: [Int]!
+            
+            beforeEach {
+                subject.push(item: 0)
+                subject.push(item: 1)
+                
+                items = []
+                
+                subject.forEach { item in
+                    items.append(item)
+                }
+            }
+            
+            it("traverses the list and passes the node.item as a parameter to it's closure parameter") {
+                expect(items).to(equal([1, 0]))
             }
         }
     }
