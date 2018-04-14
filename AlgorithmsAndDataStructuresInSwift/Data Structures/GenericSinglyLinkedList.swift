@@ -25,6 +25,10 @@ class GenericSinglyLinkedList<T: Equatable>: CustomStringConvertible {
         return head?.item
     }
     
+    func clear() {
+        head = nil
+    }
+    
     func addToFront(item: T) {
         if let oldHead = head {
             head = GenericSingleNode<T>(item: item)

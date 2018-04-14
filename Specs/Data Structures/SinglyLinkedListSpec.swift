@@ -73,6 +73,18 @@ class SinglyLinkedListSpec: QuickSpec {
             }
         }
         
+        describe("#clear()") {
+            beforeEach {
+                subject.addToFront(item: 12345)
+                
+                subject.clear()
+            }
+            
+            it("clears the subject") {
+                expect(subject.isEmpty()).to(beTruthy())
+            }
+        }
+        
         describe("#addToFront(item:)") {
             beforeEach {
                 subject.addToFront(item: 99)

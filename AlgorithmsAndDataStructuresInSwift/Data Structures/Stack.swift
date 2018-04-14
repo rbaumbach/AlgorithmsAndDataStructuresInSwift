@@ -24,6 +24,6 @@ class Stack<T: Equatable> {
     }
     
     func clear() {
-        linkedList = GenericSinglyLinkedList<T>()
+        linkedList.clear()
     }
 }

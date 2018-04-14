@@ -25,6 +25,10 @@ class SinglyLinkedList: LinkedList, CustomStringConvertible {
         return head?.item
     }
     
+    func clear() {
+        head = nil
+    }
+    
     func addToFront(item: Int) {
         if let oldHead = head {
             head = SingleNode(item: item)
