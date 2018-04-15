@@ -2,14 +2,14 @@ import Foundation
 
 extension Int {
     func integerReverse() -> Int {
-        var originalNumber = self
+        var originalInteger = self
         
         var reversedIntegerArray: [Int] = []
         
-        while (originalNumber != 0) {
-            reversedIntegerArray.append(originalNumber % 10)
+        while (originalInteger != 0) {
+            reversedIntegerArray.append(originalInteger % 10)
             
-            originalNumber = originalNumber / 10
+            originalInteger = originalInteger / 10
         }
         
         var reversedInteger = 0
