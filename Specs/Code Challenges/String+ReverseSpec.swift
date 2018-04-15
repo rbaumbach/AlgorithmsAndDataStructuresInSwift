@@ -3,6 +3,9 @@ import Nimble
 
 @testable import AlgorithmsAndDataStructuresInSwift
 
+// Problem: Reverse a string
+//          ex: "junk" -> "knuj"
+
 class String_ReverseSpec: QuickSpec {
     override func spec() {
         describe("#classicReverse()") {
