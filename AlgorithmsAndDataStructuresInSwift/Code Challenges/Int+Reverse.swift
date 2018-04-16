@@ -37,8 +37,6 @@ extension Int {
             reversedIntString = "-" + String(reversedIntString)
         }
         
-        print(reversedIntString)
-
         return Int(reversedIntString)!
     }
 }
