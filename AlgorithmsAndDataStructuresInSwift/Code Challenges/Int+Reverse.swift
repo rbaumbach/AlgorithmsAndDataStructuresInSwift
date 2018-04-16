@@ -20,4 +20,25 @@ extension Int {
         
         return reversedInteger
     }
+    
+    func stringReverse() -> Int {
+        var originalInteger = self
+        
+        var isNegative = false
+
+        if self < 0 {
+            isNegative = true
+            originalInteger = originalInteger * (-1)
+        }
+
+        var reversedIntString = String(String(originalInteger).reversed())
+
+        if isNegative {
+            reversedIntString = "-" + String(reversedIntString)
+        }
+        
+        print(reversedIntString)
+
+        return Int(reversedIntString)!
+    }
 }
