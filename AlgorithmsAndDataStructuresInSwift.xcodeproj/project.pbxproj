@@ -12,7 +12,8 @@
 		947430E6207837CA00C81A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947430E4207837CA00C81A4B /* Main.storyboard */; };
 		947430E8207837CB00C81A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947430E7207837CB00C81A4B /* Assets.xcassets */; };
 		947430EB207837CB00C81A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947430E9207837CB00C81A4B /* LaunchScreen.storyboard */; };
-		94BE916520783BF100597B82 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE916420783BF100597B82 /* TestSpec.swift */; };
+		948C9377208443CA00D7CEBE /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C9376208443CA00D7CEBE /* FizzBuzz.swift */; };
+		948C9379208443E700D7CEBE /* FizzBuzzSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */; };
 		94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A7F207842B000F6BC1E /* BubbleSort.swift */; };
 		94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */; };
 		94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A83207EC30300F6BC1E /* SinglyLinkedList.swift */; };
@@ -62,8 +63,9 @@
 		947430E7207837CB00C81A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947430EA207837CB00C81A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947430EC207837CB00C81A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948C9376208443CA00D7CEBE /* FizzBuzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
+		948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzSpec.swift; sourceTree = "<group>"; };
 		94BE916220783BF100597B82 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94BE916420783BF100597B82 /* TestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
 		94BE916620783BF100597B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CB9A7F207842B000F6BC1E /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSortSpec.swift; sourceTree = "<group>"; };
@@ -187,7 +189,6 @@
 				94CB9A9B20805E9100F6BC1E /* Code Challenges */,
 				94CB9A86207EC31800F6BC1E /* Data Structures */,
 				94CB9A7E20783DD000F6BC1E /* Supporting Files */,
-				94BE916420783BF100597B82 /* TestSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -260,6 +261,7 @@
 		94CB9A9820805D8A00F6BC1E /* Code Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
 				94CB9AAC2082DAB700F6BC1E /* String+Palindrome.swift */,
 				94CB9A9920805E6A00F6BC1E /* String+Reverse.swift */,
@@ -273,6 +275,7 @@
 				94CB9AAE2082DB6D00F6BC1E /* String+PalindromeSpec.swift */,
 				94CB9A9C20805EA500F6BC1E /* String+ReverseSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
+				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
 			);
 			path = "Code Challenges";
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				94CB9A8A207EC35900F6BC1E /* SingleNode.swift in Sources */,
 				94CB9AA320815E8F00F6BC1E /* GenericSingleNode.swift in Sources */,
 				94CB9A9A20805E6A00F6BC1E /* String+Reverse.swift in Sources */,
+				948C9377208443CA00D7CEBE /* FizzBuzz.swift in Sources */,
 				94CB9A90207FF28500F6BC1E /* DoublyLinkedList.swift in Sources */,
 				947430E3207837CA00C81A4B /* ViewController.swift in Sources */,
 				94CB9A92207FF29400F6BC1E /* DoubleNode.swift in Sources */,
@@ -463,12 +467,12 @@
 			files = (
 				94CB9AA520815EF600F6BC1E /* GenericSingleNodeSpec.swift in Sources */,
 				94CB9AAB208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift in Sources */,
+				948C9379208443E700D7CEBE /* FizzBuzzSpec.swift in Sources */,
 				94CB9A97207FF83B00F6BC1E /* DoublyLinkedListSpec.swift in Sources */,
 				94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */,
 				94CB9A88207EC32A00F6BC1E /* SinglyLinkedListSpec.swift in Sources */,
 				94CB9AB32084032E00F6BC1E /* Int+ReverseSpec.swift in Sources */,
 				94CB9AA120813A2100F6BC1E /* StackSpec.swift in Sources */,
-				94BE916520783BF100597B82 /* TestSpec.swift in Sources */,
 				94CB9A94207FF2A500F6BC1E /* DoubleNodeSpec.swift in Sources */,
 				94CB9A8C207EC37000F6BC1E /* SingleNodeSpec.swift in Sources */,
 				94CB9A9D20805EA500F6BC1E /* String+ReverseSpec.swift in Sources */,
