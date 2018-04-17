@@ -48,14 +48,15 @@ extension String {
     }
     
     func mostFrequentCharHardSwifty() -> String {
+        // can we update variable names?
         let characterDict = createDictionaryOfCharacterOccurrencesWithIndex(string: self)
 
-        let maxNumberOfOccurrences = characterDict.values.max { array0, array1 -> Bool in
+        let maxNumberOfSingleLetterOccurrences = characterDict.values.max { array0, array1 in
             return array0[1] < array1[1]
         }?.last
         
         let maxCharacterDict = characterDict.filter { key, value in
-            return value[1] == maxNumberOfOccurrences
+            return value[1] == maxNumberOfSingleLetterOccurrences
         }
         
         let maxCharacter = maxCharacterDict.min { dictEntry0, dictEntry1 in
