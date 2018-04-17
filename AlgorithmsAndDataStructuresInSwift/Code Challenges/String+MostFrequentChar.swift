@@ -48,25 +48,21 @@ extension String {
     }
     
     func mostFrequentCharHardSwifty() -> String {
-        var characterDict = createDictionaryOfCharacterOccurrencesWithIndex(string: self)
-        
-        var maxNumberOfOccurrences = characterDict.values.max { array0, array1 -> Bool in
-            return array0[1] < array1[1]
-        }
-        
-        var maxCharacterDict: [String: [Int]] = [:]
+        let characterDict = createDictionaryOfCharacterOccurrencesWithIndex(string: self)
 
-        for (char, numberOfOccurrences) in characterDict {
-            if numberOfOccurrences[1] == maxNumberOfOccurrences![1] {
-                maxCharacterDict[char] = numberOfOccurrences
-            }
+        let maxNumberOfOccurrences = characterDict.values.max { array0, array1 -> Bool in
+            return array0[1] < array1[1]
+        }?.last
+        
+        let maxCharacterDict = characterDict.filter { key, value in
+            return value[1] == maxNumberOfOccurrences
         }
         
-        let minIndexOfMaxNumberOfOccurrences = maxCharacterDict.min { dictEntry0, dictEntry1 in
+        let maxCharacter = maxCharacterDict.min { dictEntry0, dictEntry1 in
             return dictEntry0.value[0] < dictEntry1.value[0]
         }
         
-        return minIndexOfMaxNumberOfOccurrences?.key ?? ""
+        return maxCharacter?.key ?? ""
     }
     
     // MARK: - Private Methods
