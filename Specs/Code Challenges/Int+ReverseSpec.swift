@@ -3,8 +3,9 @@ import Nimble
 
 @testable import AlgorithmsAndDataStructuresInSwift
 
-// Problem: Reverse a string
-//          ex: "junk" -> "knuj"
+// Problem: Reverse an integer, keep the sign and remove leading zeros after reversal
+//          ex: -500 -> "-5"
+//              1234 -> "4321"
 
 class Int_ReverseSpec: QuickSpec {
     override func spec() {
