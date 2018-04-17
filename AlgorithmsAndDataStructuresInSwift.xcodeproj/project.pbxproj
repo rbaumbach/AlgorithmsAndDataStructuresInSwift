@@ -16,6 +16,8 @@
 		948C9379208443E700D7CEBE /* FizzBuzzSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */; };
 		948C937F20856DDB00D7CEBE /* ReverseIntToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */; };
 		948C938120856E6000D7CEBE /* ReverseIntToStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */; };
+		948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */; };
+		948C93852085936100D7CEBE /* String+MostFrequentCharSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */; };
 		94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A7F207842B000F6BC1E /* BubbleSort.swift */; };
 		94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */; };
 		94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A83207EC30300F6BC1E /* SinglyLinkedList.swift */; };
@@ -69,6 +71,8 @@
 		948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzSpec.swift; sourceTree = "<group>"; };
 		948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseIntToString.swift; sourceTree = "<group>"; };
 		948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseIntToStringSpec.swift; sourceTree = "<group>"; };
+		948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MostFrequentChar.swift"; sourceTree = "<group>"; };
+		948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MostFrequentCharSpec.swift"; sourceTree = "<group>"; };
 		94BE916220783BF100597B82 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BE916620783BF100597B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CB9A7F207842B000F6BC1E /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
 				948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */,
+				948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */,
 				94CB9AAC2082DAB700F6BC1E /* String+Palindrome.swift */,
 				94CB9A9920805E6A00F6BC1E /* String+Reverse.swift */,
 			);
@@ -279,9 +284,10 @@
 			children = (
 				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
+				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
+				948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */,
 				94CB9AAE2082DB6D00F6BC1E /* String+PalindromeSpec.swift */,
 				94CB9A9C20805EA500F6BC1E /* String+ReverseSpec.swift */,
-				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
 			);
 			path = "Code Challenges";
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				94CB9A92207FF29400F6BC1E /* DoubleNode.swift in Sources */,
 				94CB9A9F208139FE00F6BC1E /* Stack.swift in Sources */,
 				94CB9AAD2082DAB700F6BC1E /* String+Palindrome.swift in Sources */,
+				948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */,
 				947430E1207837CA00C81A4B /* AppDelegate.swift in Sources */,
 				94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */,
 				94CB9AA72081619500F6BC1E /* GenericSinglyLinkedList.swift in Sources */,
@@ -476,6 +483,7 @@
 				94CB9AAB208166FD00F6BC1E /* GenericSinglyLinkedListSpec.swift in Sources */,
 				948C9379208443E700D7CEBE /* FizzBuzzSpec.swift in Sources */,
 				94CB9A97207FF83B00F6BC1E /* DoublyLinkedListSpec.swift in Sources */,
+				948C93852085936100D7CEBE /* String+MostFrequentCharSpec.swift in Sources */,
 				94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */,
 				94CB9A88207EC32A00F6BC1E /* SinglyLinkedListSpec.swift in Sources */,
 				948C938120856E6000D7CEBE /* ReverseIntToStringSpec.swift in Sources */,

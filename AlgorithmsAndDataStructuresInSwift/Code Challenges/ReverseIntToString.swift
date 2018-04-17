@@ -20,7 +20,6 @@ class ReverseIntToString {
         let reversedIntString = String(String(inputInt).reversed())
         
         var sanitizedIntString = removeLeadingZeros(input: reversedIntString)
-        print(sanitizedIntString)
         
         if isNegative {
             sanitizedIntString = "-" + sanitizedIntString
