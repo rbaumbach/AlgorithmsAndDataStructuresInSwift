@@ -1,9 +1,21 @@
 import UIKit
 
+protocol Dispatcher {
+    func dispatchOnMainQueue(execute: @escaping () -> Void)
+}
+
+class DispatcherForQueue: Dispatcher {
+    func dispatchOnMainQueue(execute: @escaping () -> Void) {
+        DispatchQueue.main.async(execute:execute)
+    }
+}
+
 class AsyncEvenOddStringConcatenation {
     // MARK: - Given property and methods
     
     var testLabel: UILabel = UILabel()
+    
+    var dispatcher: Dispatcher = DispatcherForQueue()
     
     private func getRemoteFirstString(completionBlock: @escaping (String) -> Void) {
         completionBlock("Billy")
@@ -18,9 +30,9 @@ class AsyncEvenOddStringConcatenation {
     func buildString(using integer: Int, completionBlock: @escaping (String) -> Void) {
         if integer % 2 == 0 {
             getRemoteFirstString { [weak self] firstString in
-                self?.getRemoteSecondString(completionBlock: { secondString in
+                self?.getRemoteSecondString { secondString in
                     completionBlock(firstString + secondString)
-                })
+                }
             }
         } else {
             getRemoteFirstString { string in
@@ -32,13 +44,15 @@ class AsyncEvenOddStringConcatenation {
     func buildStringForLabel(using integer: Int) {
         if integer % 2 == 0 {
             getRemoteFirstString { [weak self] firstString in
-                self?.getRemoteSecondString(completionBlock: { [weak self] secondString in
+                self?.getRemoteSecondString { [weak self] secondString in
                     self?.testLabel.text = firstString + secondString
-                })
+                }
             }
         } else {
             getRemoteFirstString { [weak self] firstString in
-                self?.testLabel.text = firstString
+                self?.dispatcher.dispatchOnMainQueue {
+                    self?.testLabel.text = firstString
+                }
             }
         }
     }

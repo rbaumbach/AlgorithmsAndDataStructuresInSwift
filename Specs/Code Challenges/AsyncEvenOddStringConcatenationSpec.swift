@@ -17,13 +17,28 @@ import Nimble
 //              evenBuildString = string
 //          }
 //          evenBuildString -> "Billy Goat"
+//
+// Testing Notes: The protocol Dispatcher and class DispacherForQueue are used to mock out async calls on the main queue.  This class
+//                FakeDispatcherForQueue is used for mocking our real DispatcherForQueue
+
+class FakeDispatcherForQueue: Dispatcher {
+    var executionBlock: (() -> Void)?
+    
+    func dispatchOnMainQueue(execute: @escaping () -> Void) {
+        executionBlock = execute
+    }
+}
 
 class AsyncEvenOddStringConcatenationSpec: QuickSpec {
     override func spec() {
         var subject: AsyncEvenOddStringConcatenation!
+        var fakeDispatcherForQueue: FakeDispatcherForQueue!
         
         beforeEach {
+            fakeDispatcherForQueue = FakeDispatcherForQueue()
+            
             subject = AsyncEvenOddStringConcatenation()
+            subject.dispatcher = fakeDispatcherForQueue
         }
         
         describe("buildString(using:completionBlock:)") {
@@ -71,6 +86,8 @@ class AsyncEvenOddStringConcatenationSpec: QuickSpec {
             describe("when integer parameter is odd") {
                 beforeEach {
                     subject.buildStringForLabel(using: 1)
+                    
+                    fakeDispatcherForQueue.executionBlock?()
                 }
                 
                 it("passes it's completionBlock the correct string") {
