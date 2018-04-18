@@ -45,7 +45,9 @@ class AsyncEvenOddStringConcatenation {
         if integer % 2 == 0 {
             getRemoteFirstString { [weak self] firstString in
                 self?.getRemoteSecondString { [weak self] secondString in
-                    self?.testLabel.text = firstString + secondString
+                    self?.dispatcher.dispatchOnMainQueue {
+                        self?.testLabel.text = firstString + secondString
+                    }
                 }
             }
         } else {

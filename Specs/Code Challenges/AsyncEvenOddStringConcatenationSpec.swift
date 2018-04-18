@@ -76,6 +76,8 @@ class AsyncEvenOddStringConcatenationSpec: QuickSpec {
             describe("when integer parameter is even") {
                 beforeEach {
                     subject.buildStringForLabel(using: 0)
+                    
+                    fakeDispatcherForQueue.executionBlock?()
                 }
 
                 it("passes it's completionBlock the correct string") {
