@@ -15,7 +15,7 @@ class AsyncEvenOddStringConcatenation {
     
     var testLabel: UILabel = UILabel()
     
-    var dispatcher: Dispatcher = DispatcherForQueue()
+    private var dispatcher: Dispatcher
     
     private func getRemoteFirstString(completionBlock: @escaping (String) -> Void) {
         completionBlock("Billy")
@@ -23,6 +23,12 @@ class AsyncEvenOddStringConcatenation {
 
     private func getRemoteSecondString(completionBlock: @escaping (String) -> Void) {
         completionBlock("Goat")
+    }
+    
+    // MARK: - Init Method
+    
+    init(dispatcher: Dispatcher = DispatcherForQueue()) {
+        self.dispatcher = dispatcher
     }
     
     // MARK: - Methods to implement

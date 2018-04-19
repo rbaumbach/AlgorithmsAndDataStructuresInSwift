@@ -37,8 +37,7 @@ class AsyncEvenOddStringConcatenationSpec: QuickSpec {
         beforeEach {
             fakeDispatcherForQueue = FakeDispatcherForQueue()
             
-            subject = AsyncEvenOddStringConcatenation()
-            subject.dispatcher = fakeDispatcherForQueue
+            subject = AsyncEvenOddStringConcatenation(dispatcher: fakeDispatcherForQueue)
         }
         
         describe("buildString(using:completionBlock:)") {
