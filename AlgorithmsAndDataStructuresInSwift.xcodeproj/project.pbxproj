@@ -47,6 +47,8 @@
 		94CB9AAF2082DB6D00F6BC1E /* String+PalindromeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AAE2082DB6D00F6BC1E /* String+PalindromeSpec.swift */; };
 		94CB9AB12084031E00F6BC1E /* Int+Reverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */; };
 		94CB9AB32084032E00F6BC1E /* Int+ReverseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */; };
+		94EC58B72089318E00F48B5E /* ArrayChunker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC58B62089318E00F48B5E /* ArrayChunker.swift */; };
+		94EC58B9208931A200F48B5E /* ArrayChunkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC58B8208931A200F48B5E /* ArrayChunkerSpec.swift */; };
 		A66B2E5CBDE9B59914CD07A9 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */; };
 		C590BA6BEE1DA77B146BC6D3 /* Pods_AlgorithmsAndDataStructuresInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065D38C1F3BC485C7B9F927 /* Pods_AlgorithmsAndDataStructuresInSwift.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		94CB9AAE2082DB6D00F6BC1E /* String+PalindromeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PalindromeSpec.swift"; sourceTree = "<group>"; };
 		94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Reverse.swift"; sourceTree = "<group>"; };
 		94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ReverseSpec.swift"; sourceTree = "<group>"; };
+		94EC58B62089318E00F48B5E /* ArrayChunker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChunker.swift; sourceTree = "<group>"; };
+		94EC58B8208931A200F48B5E /* ArrayChunkerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChunkerSpec.swift; sourceTree = "<group>"; };
 		DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED98151E623575A12B6EF542 /* Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmsAndDataStructuresInSwift/Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +289,7 @@
 		94CB9A9820805D8A00F6BC1E /* Code Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				94EC58B62089318E00F48B5E /* ArrayChunker.swift */,
 				94189BFE20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift */,
 				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
@@ -299,6 +304,7 @@
 		94CB9A9B20805E9100F6BC1E /* Code Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				94EC58B8208931A200F48B5E /* ArrayChunkerSpec.swift */,
 				94189C002086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift */,
 				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
@@ -489,6 +495,7 @@
 				94189BFF20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift in Sources */,
 				948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */,
 				947430E1207837CA00C81A4B /* AppDelegate.swift in Sources */,
+				94EC58B72089318E00F48B5E /* ArrayChunker.swift in Sources */,
 				94189C0320881CE400E693A9 /* TreeNode.swift in Sources */,
 				94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */,
 				94CB9AA72081619500F6BC1E /* GenericSinglyLinkedList.swift in Sources */,
@@ -513,6 +520,7 @@
 				94CB9AA120813A2100F6BC1E /* StackSpec.swift in Sources */,
 				94CB9A94207FF2A500F6BC1E /* DoubleNodeSpec.swift in Sources */,
 				94CB9A8C207EC37000F6BC1E /* SingleNodeSpec.swift in Sources */,
+				94EC58B9208931A200F48B5E /* ArrayChunkerSpec.swift in Sources */,
 				94189C012086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift in Sources */,
 				94CB9A9D20805EA500F6BC1E /* String+ReverseSpec.swift in Sources */,
 				94189C0520881D0300E693A9 /* TreeNodeSpec.swift in Sources */,
