@@ -30,6 +30,32 @@ class ArrayChunker {
         return chunkedArray
     }
     
+    func chunkTake3(array: [Int], chunkSize: Int) -> [[Int]] {
+        guard !array.isEmpty else {
+            return []
+        }
+        
+        var chunkedArray: [[Int]] = []
+        
+        var index = 0
+        
+        while index < array.count {
+            if (index + chunkSize > array.count - 1) {
+                let slice = Array(array[index...])
+                
+                chunkedArray.append(slice)
+            } else {
+                let slice = Array(array[index..<(index + chunkSize)])
+                
+                chunkedArray.append(slice)
+            }
+            
+            index += chunkSize
+        }
+        
+        return chunkedArray
+    }
+    
     // MARK: - Private Methods
     
     private func generateArrayChunks(inputArray: [Int],
