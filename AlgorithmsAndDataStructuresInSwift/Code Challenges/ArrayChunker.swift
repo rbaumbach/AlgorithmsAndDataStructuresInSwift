@@ -13,6 +13,23 @@ class ArrayChunker {
         return chunkedArray
     }
     
+    func chunkTake2(array: [Int], chunkSize: Int) -> [[Int]] {
+        var chunkedArray: [[Int]] = []
+        
+        array.forEach { number in
+            var lastElement = chunkedArray.last
+            
+            if lastElement == nil || lastElement?.count == chunkSize {
+                chunkedArray.append([number])
+            } else {
+                lastElement!.append(number)
+                chunkedArray[chunkedArray.count - 1] = lastElement!
+            }
+        }
+        
+        return chunkedArray
+    }
+    
     // MARK: - Private Methods
     
     private func generateArrayChunks(inputArray: [Int],
