@@ -31,10 +31,6 @@ class ArrayChunker {
     }
     
     func chunkTake3(array: [Int], chunkSize: Int) -> [[Int]] {
-        guard !array.isEmpty else {
-            return []
-        }
-        
         var chunkedArray: [[Int]] = []
         
         var index = 0
