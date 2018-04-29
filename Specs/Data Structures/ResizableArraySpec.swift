@@ -133,5 +133,57 @@ class ResizableArraySpec: QuickSpec {
                 }
             }
         }
+        
+        describe("#remove(index:)") {
+            var removedItem: Int!
+            
+            describe("when array is empty") {
+                beforeEach {
+                    removedItem = subject.remove(index: 0)
+                }
+                
+                it("returns nil") {
+                    expect(removedItem).to(beNil())
+                }
+            }
+            
+            describe("when array is NOT empty") {
+                describe("when backing array doesn't require a resize (shrinkage)") {
+                    beforeEach {
+                        subject.append(item: 0)
+                        subject.append(item: 1)
+                        
+                        removedItem = subject.remove(index: 0)
+                    }
+                    
+                    it("removes the last item in the array and returns it") {
+                        expect(removedItem).to(equal(0))
+                    }
+                    
+                    it("doesn't shrink the array") {
+                        expect(subject.backingArray.count).to(equal(2))
+                    }
+                }
+                
+                describe("when backing array requires a resize") {
+                    beforeEach {
+                        subject.append(item: 0)
+                        subject.append(item: 1)
+                        subject.append(item: 2)
+                        subject.append(item: 3)
+                        
+                        _ = subject.remove(index: 0)
+                        _ = subject.remove(index: 0)
+                        
+                        removedItem = subject.remove(index: 0)
+                    }
+                    
+                    it("removes the item and halves the backing array") {
+                        expect(removedItem).to(equal(2))
+                        expect(subject.backingArray.count).to(equal(2))
+                    }
+                }
+            }
+        }
     }
 }

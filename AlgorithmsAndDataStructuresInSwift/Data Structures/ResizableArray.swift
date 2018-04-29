@@ -30,13 +30,7 @@ class ResizableArray {
     }
     
     func append(item: Int) {
-        if count == backingArray.count {
-            var capacity = backingArray.count
-            
-            capacity *= 2
-            
-            resizeUnderlyingArray(newSize: capacity)
-        }
+        growUnderlyingArrayIfNecessary()
         
         backingArray[count] = item
         
@@ -54,6 +48,32 @@ class ResizableArray {
         
         backingArray[count] = nil
         
+        shrinkUnderlyingArrayIfNecessary()
+        
+        return lastElement
+    }
+    
+    func remove(index: Int) -> Int? {
+        guard count > 0 else {
+            return nil
+        }
+        
+        let removedElement = backingArray[index]
+        
+        count -= 1
+        
+        removeItemAndShiftElementsInUnderlyingArray(indexOfItemToRemove: index)
+        
+        backingArray[count] = nil
+        
+        shrinkUnderlyingArrayIfNecessary()
+        
+        return removedElement
+    }
+
+    // MARK: - Private Methods
+    
+    private func shrinkUnderlyingArrayIfNecessary() {
         if count > 0 && count == backingArray.count / 4 {
             var capacity = backingArray.count
             
@@ -61,11 +81,17 @@ class ResizableArray {
             
             resizeUnderlyingArray(newSize: capacity)
         }
-        
-        return lastElement
     }
-
-    // MARK: - Private Methods
+    
+    private func growUnderlyingArrayIfNecessary() {
+        if count == backingArray.count {
+            var capacity = backingArray.count
+            
+            capacity *= 2
+            
+            resizeUnderlyingArray(newSize: capacity)
+        }
+    }
     
     private func resizeUnderlyingArray(newSize: Int) {
         var resizedArray: [Int?] = Array(repeating: nil, count: newSize)
@@ -75,5 +101,15 @@ class ResizableArray {
         resizedArray.replaceSubrange(replacementRange, with: Array(replacementRange))
         
         backingArray = resizedArray
+    }
+    
+    private func removeItemAndShiftElementsInUnderlyingArray(indexOfItemToRemove: Int) {
+        var currentArrayIndex = indexOfItemToRemove
+        
+        while currentArrayIndex < count - 1 {
+            backingArray[currentArrayIndex] = backingArray[currentArrayIndex + 1]
+            
+            currentArrayIndex += 1
+        }
     }
 }
