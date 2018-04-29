@@ -1,14 +1,11 @@
 import Foundation
 
 class ResizableArray {
-    // MARK: - Private Properties
+    // MARK: - Read only Properties
     
-    private(set) var backingArray: [Int?]
+    private(set) var backingArray: [Int?] = Array(repeating: nil, count: 1)
     
-    // we will probably not need this, I think the capacity is only useful when creating the initial array
-    private(set) var capacity = 1
-    
-    var count = 0
+    private(set) var count = 0
     
     var isEmpty: Bool {
         return count == 0
@@ -16,14 +13,10 @@ class ResizableArray {
 
     // MARK: - Init Methods
     
-    init() {
-        backingArray = Array(repeating: nil, count: capacity)
-    }
+    init() { }
     
     init(capacity: Int) {
-        self.capacity = capacity
-        
-        backingArray = Array(repeating: nil, count: self.capacity)
+        backingArray = Array(repeating: nil, count: capacity)
     }
     
     // MARK: - Public Methods
@@ -37,7 +30,9 @@ class ResizableArray {
     }
     
     func append(item: Int) {
-        if count == capacity {
+        if count == backingArray.count {
+            var capacity = backingArray.count
+            
             capacity *= 2
             
             resizeUnderlyingArray(newSize: capacity)
@@ -59,7 +54,9 @@ class ResizableArray {
         
         backingArray[count] = nil
         
-        if count > 0 && count == capacity / 4 {
+        if count > 0 && count == backingArray.count / 4 {
+            var capacity = backingArray.count
+            
             capacity /= 2
             
             resizeUnderlyingArray(newSize: capacity)

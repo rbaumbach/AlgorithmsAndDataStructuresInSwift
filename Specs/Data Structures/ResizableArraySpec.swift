@@ -77,7 +77,6 @@ class ResizableArraySpec: QuickSpec {
                 }
                 
                 it("doubles the internal array before adding the item") {
-                    expect(subject.capacity).to(equal(8))
                     expect(subject.backingArray.count).to(equal(8))
                 }
             }
