@@ -16,7 +16,7 @@ class BinarySearchTreeNode<T: Equatable, U: Equatable>: Equatable {
         self.value = value
     }
     
-    // MARK: - Equatable
+    // MARK: - <Equatable>
     
     static func == (lhs: BinarySearchTreeNode<T, U>, rhs: BinarySearchTreeNode<T, U>) -> Bool {
         return lhs.key == rhs.key && lhs.value == rhs.value &&

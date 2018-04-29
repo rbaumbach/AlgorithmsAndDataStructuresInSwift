@@ -45,5 +45,30 @@ class TreeNodeSpec: QuickSpec {
                 expect(subject.children).to(equal([TreeNode<Int>(item: 1), TreeNode<Int>(item: 2)]))
             }
         }
+        
+        describe("<Equatable>") {
+            var anotherNode: TreeNode<Int>!
+            
+            describe("when a tree node is equal to another") {
+                beforeEach {
+                    anotherNode = TreeNode(item: 42)
+                    anotherNode.children = children
+                }
+                
+                it("is equal") {
+                    expect(subject == anotherNode).to(beTruthy())
+                }
+            }
+            
+            describe("when item and nextNode for the left do NOT equal the rhs") {
+                beforeEach {
+                    anotherNode = TreeNode(item: 99)
+                }
+
+                it("is NOT equal") {
+                    expect(subject == anotherNode).to(beFalsy())
+                }
+            }
+        }
     }
 }
