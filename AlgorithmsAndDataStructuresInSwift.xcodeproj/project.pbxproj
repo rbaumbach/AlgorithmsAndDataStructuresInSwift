@@ -24,6 +24,8 @@
 		948C938120856E6000D7CEBE /* ReverseIntToStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */; };
 		948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */; };
 		948C93852085936100D7CEBE /* String+MostFrequentCharSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */; };
+		94A39D432094B875003E58F4 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */; };
+		94A39D452094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */; };
 		94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A7F207842B000F6BC1E /* BubbleSort.swift */; };
 		94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */; };
 		94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A83207EC30300F6BC1E /* SinglyLinkedList.swift */; };
@@ -87,6 +89,8 @@
 		948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseIntToStringSpec.swift; sourceTree = "<group>"; };
 		948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MostFrequentChar.swift"; sourceTree = "<group>"; };
 		948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MostFrequentCharSpec.swift"; sourceTree = "<group>"; };
+		94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
+		94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
 		94BE916220783BF100597B82 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BE916620783BF100597B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CB9A7F207842B000F6BC1E /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		9447B297207BD6C4009A184E /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */,
 				94CB9A91207FF29400F6BC1E /* DoubleNode.swift */,
 				94CB9A8F207FF28500F6BC1E /* DoublyLinkedList.swift */,
 				94CB9AA220815E8F00F6BC1E /* GenericSingleNode.swift */,
@@ -273,6 +278,7 @@
 		94CB9A86207EC31800F6BC1E /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */,
 				94CB9A93207FF2A500F6BC1E /* DoubleNodeSpec.swift */,
 				94CB9A96207FF83B00F6BC1E /* DoublyLinkedListSpec.swift */,
 				94CB9AA420815EF600F6BC1E /* GenericSingleNodeSpec.swift */,
@@ -481,6 +487,7 @@
 			files = (
 				94CB9AB12084031E00F6BC1E /* Int+Reverse.swift in Sources */,
 				94CB9A8E207FF09700F6BC1E /* LinkedList.swift in Sources */,
+				94A39D432094B875003E58F4 /* BinarySearchTreeNode.swift in Sources */,
 				94CB9A8A207EC35900F6BC1E /* SingleNode.swift in Sources */,
 				94CB9AA320815E8F00F6BC1E /* GenericSingleNode.swift in Sources */,
 				948C937F20856DDB00D7CEBE /* ReverseIntToString.swift in Sources */,
@@ -521,6 +528,7 @@
 				94CB9A94207FF2A500F6BC1E /* DoubleNodeSpec.swift in Sources */,
 				94CB9A8C207EC37000F6BC1E /* SingleNodeSpec.swift in Sources */,
 				94EC58B9208931A200F48B5E /* ArrayChunkerSpec.swift in Sources */,
+				94A39D452094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift in Sources */,
 				94189C012086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift in Sources */,
 				94CB9A9D20805EA500F6BC1E /* String+ReverseSpec.swift in Sources */,
 				94189C0520881D0300E693A9 /* TreeNodeSpec.swift in Sources */,
