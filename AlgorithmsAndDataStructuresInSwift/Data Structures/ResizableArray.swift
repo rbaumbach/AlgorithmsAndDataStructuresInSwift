@@ -98,7 +98,7 @@ class ResizableArray {
         
         let replacementRange = 0..<count
         
-        resizedArray.replaceSubrange(replacementRange, with: Array(replacementRange))
+        resizedArray.replaceSubrange(replacementRange, with: backingArray[replacementRange])
         
         backingArray = resizedArray
     }
