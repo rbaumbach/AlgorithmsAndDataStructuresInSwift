@@ -38,7 +38,7 @@ class MatrixSortedSearch {
     
     // MARK: - Private Methods
     
-    func search(matrix: [[Int]], number: Int, start: Int, end: Int) -> (Int, Int) {
+    private func search(matrix: [[Int]], number: Int, start: Int, end: Int) -> (Int, Int) {
         if start >= end {
             return (-1, -1)
         }
