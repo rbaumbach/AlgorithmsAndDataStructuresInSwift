@@ -1,7 +1,9 @@
 import Foundation
 
 extension Array where Element: Comparable {
-    func binarySearch(item: Element) -> Bool {
+    // MARK: - Public Methods
+    
+    func binarySearch(item: Element) -> Int {
         var start = 0
         var end = self.count
 
@@ -9,7 +11,7 @@ extension Array where Element: Comparable {
             let mid = (start + end) / 2
 
             if item == self[mid] {
-                return true
+                return mid
             } else if item < self[mid] {
                 end = mid
             } else {
@@ -17,22 +19,24 @@ extension Array where Element: Comparable {
             }
         }
 
-        return false
+        return -1
     }
     
-    func recursiveBinarySearch(item: Element) -> Bool {
+    func recursiveBinarySearch(item: Element) -> Int {
         return recursiveBinarySearch(item: item, start: 0, end: self.count)
     }
     
-    func recursiveBinarySearch(item: Element, start: Int, end: Int) -> Bool {
+    // MARK: - Private Methods
+    
+    private func recursiveBinarySearch(item: Element, start: Int, end: Int) -> Int {
         if start >= end {
-            return false
+            return -1
         }
         
         let mid = (start + end) / 2
         
         if item == self[mid] {
-            return true
+            return mid
         } else if item < self[mid] {
             return recursiveBinarySearch(item: item, start: start, end: mid)
         } else {

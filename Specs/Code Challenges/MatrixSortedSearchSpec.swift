@@ -11,12 +11,12 @@ import Nimble
 //                                  {14, 20, 21},
 //                                  {30, 34, 43} }
 //          x = 14
-//          Output : Found at (1, 0)
+//          Output : (1, 0)
 //          Input : mat[][] = { {1, 5, 9, 11},
 //                              {14, 20, 21, 26},
 //                              {30, 34, 43, 50} }
 //          x = 42
-//          Output : -1
+//          Output : (-1, -1)
 
 class MatrixSortedSearchSpec: QuickSpec {
     override func spec() {
@@ -25,27 +25,73 @@ class MatrixSortedSearchSpec: QuickSpec {
         beforeEach {
             subject = MatrixSortedSearch()
         }
+        
+        describe("#search(matrix:number:)") {
+            var matrix: [[Int]]!
+            var output: (Int, Int)!
+            
+            beforeEach {
+                matrix = [ [1, 5, 9],
+                           [14, 20, 21],
+                           [30, 34, 43] ]
+            }
+            
+            describe("when number is present in matrix") {
+                beforeEach {
+                    output = subject.search(matrix: matrix, number: 14)
+                    
+                    print("")
+                }
+                
+                it("returns the ") {
+                    expect(output.0).to(equal(1))
+                    expect(output.1).to(equal(0))
+                }
+            }
+            
+            describe("when number is NOT present in matrix") {
+                beforeEach {
+                    output = subject.search(matrix: matrix, number: 42)
+                }
+                
+                it("returns -1 string") {
+                    expect(output.0).to(equal(-1))
+                    expect(output.1).to(equal(-1))
+                }
+            }
+        }
 
-        describe("#search(number:)") {
-            var output: String!
+        describe("#iterativeSearch(matrix:number:)") {
+            var matrix: [[Int]]!
+            var output: (Int, Int)!
+            
+            beforeEach {
+                matrix = [ [1, 5, 9],
+                           [14, 20, 21],
+                           [30, 34, 43] ]
+            }
 
             describe("when number is present in matrix") {
                 beforeEach {
-                    output = subject.search(number: 14)
+                    output = subject.iterativeSearch(matrix: matrix, number: 14)
+                    
+                    print("")
                 }
 
                 it("returns the ") {
-                    expect(output).to(equal("(1,0)"))
+                    expect(output.0).to(equal(1))
+                    expect(output.1).to(equal(0))
                 }
             }
 
             describe("when number is NOT present in matrix") {
                 beforeEach {
-                    output = subject.search(number:42)
+                    output = subject.iterativeSearch(matrix: matrix, number: 42)
                 }
 
                 it("returns -1 string") {
-                    expect(output).to(equal("-1"))
+                    expect(output.0).to(equal(-1))
+                    expect(output.1).to(equal(-1))
                 }
             }
         }

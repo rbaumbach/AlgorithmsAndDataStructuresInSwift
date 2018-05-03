@@ -3,8 +3,8 @@ import Nimble
 
 @testable import AlgorithmsAndDataStructuresInSwift
 
-// Problem: Given a sorted array, implement a binary search.  If item is found, return true, if item is NOT found
-//          return false
+// Problem: Given a sorted array, implement a binary search.  If item is found, return the index, if item is NOT found
+//          return -1
 //          ex: sorted array = [2, 4, 6, 8, 10, 20, 30, 40, 50, 100]
 //          A search for 4 -> true, a search for 77 -> false
 
@@ -18,49 +18,49 @@ class Array_BinarySearchSpec: QuickSpec {
         }
         
         describe("binarySearch(item:)") {
-            var hasFoundItem: Bool!
+            var indexOfFoundItem: Int!
             
             describe("when searched item is present in the subject") {
                 beforeEach {
-                    hasFoundItem = subject.binarySearch(item: 4)
+                    indexOfFoundItem = subject.binarySearch(item: 4)
                 }
 
-                it("returns true") {
-                    expect(hasFoundItem).to(beTruthy())
+                it("returns the correct index") {
+                    expect(indexOfFoundItem).to(equal(1))
                 }
             }
             
             describe("when searched item is NOT present in the subject") {
                 beforeEach {
-                    hasFoundItem = subject.binarySearch(item: 77)
+                    indexOfFoundItem = subject.binarySearch(item: 77)
                 }
 
-                it("returns false") {
-                    expect(hasFoundItem).to(beFalsy())
+                it("returns -1") {
+                    expect(indexOfFoundItem).to(equal(-1))
                 }
             }
         }
         
         describe("recursiveBinarySearch(item:)") {
-            var hasFoundItem: Bool!
+            var indexOfFoundItem: Int!
             
             describe("when searched item is present in the subject") {
                 beforeEach {
-                    hasFoundItem = subject.binarySearch(item: 4)
+                    indexOfFoundItem = subject.binarySearch(item: 4)
                 }
                 
-                it("returns true") {
-                    expect(hasFoundItem).to(beTruthy())
+                it("returns the correct index") {
+                    expect(indexOfFoundItem).to(equal(1))
                 }
             }
             
             describe("when searched item is NOT present in the subject") {
                 beforeEach {
-                    hasFoundItem = subject.binarySearch(item: 77)
+                    indexOfFoundItem = subject.binarySearch(item: 77)
                 }
                 
-                it("returns false") {
-                    expect(hasFoundItem).to(beFalsy())
+                it("returns -1") {
+                    expect(indexOfFoundItem).to(equal(-1))
                 }
             }
         }
