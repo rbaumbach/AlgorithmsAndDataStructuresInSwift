@@ -273,6 +273,7 @@
 			children = (
 				94F1CEED2098E25300D63E00 /* Array+BinarySearch.swift */,
 				94CB9A7F207842B000F6BC1E /* BubbleSort.swift */,
+				94F1CEF1209B99F300D63E00 /* Int+Prime.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -288,8 +289,9 @@
 		94CB9A85207EC30B00F6BC1E /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */,
 				94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */,
+				94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */,
+				94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -318,7 +320,6 @@
 				94EC58B62089318E00F48B5E /* ArrayChunker.swift */,
 				94189BFE20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift */,
 				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
-				94F1CEF1209B99F300D63E00 /* Int+Prime.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
 				94F1CEE72098D3F100D63E00 /* MatrixSortedSearch.swift */,
 				948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */,
@@ -335,7 +336,6 @@
 				94EC58B8208931A200F48B5E /* ArrayChunkerSpec.swift */,
 				94189C002086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift */,
 				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
-				94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
 				94F1CEE92098D41200D63E00 /* MatrixSortedSearchSpec.swift */,
 				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
