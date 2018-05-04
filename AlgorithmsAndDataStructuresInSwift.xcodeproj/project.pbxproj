@@ -57,6 +57,8 @@
 		94F1CEEA2098D41200D63E00 /* MatrixSortedSearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEE92098D41200D63E00 /* MatrixSortedSearchSpec.swift */; };
 		94F1CEEE2098E25300D63E00 /* Array+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEED2098E25300D63E00 /* Array+BinarySearch.swift */; };
 		94F1CEF02098E55800D63E00 /* Array+BinarySearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */; };
+		94F1CEF2209B99F300D63E00 /* Int+Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF1209B99F300D63E00 /* Int+Prime.swift */; };
+		94F1CEF4209B9A0B00D63E00 /* Int+PrimeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */; };
 		A66B2E5CBDE9B59914CD07A9 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */; };
 		C590BA6BEE1DA77B146BC6D3 /* Pods_AlgorithmsAndDataStructuresInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065D38C1F3BC485C7B9F927 /* Pods_AlgorithmsAndDataStructuresInSwift.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +132,8 @@
 		94F1CEE92098D41200D63E00 /* MatrixSortedSearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSortedSearchSpec.swift; sourceTree = "<group>"; };
 		94F1CEED2098E25300D63E00 /* Array+BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BinarySearch.swift"; sourceTree = "<group>"; };
 		94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BinarySearchSpec.swift"; sourceTree = "<group>"; };
+		94F1CEF1209B99F300D63E00 /* Int+Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Prime.swift"; sourceTree = "<group>"; };
+		94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PrimeSpec.swift"; sourceTree = "<group>"; };
 		DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED98151E623575A12B6EF542 /* Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmsAndDataStructuresInSwift/Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +318,7 @@
 				94EC58B62089318E00F48B5E /* ArrayChunker.swift */,
 				94189BFE20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift */,
 				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
+				94F1CEF1209B99F300D63E00 /* Int+Prime.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
 				94F1CEE72098D3F100D63E00 /* MatrixSortedSearch.swift */,
 				948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */,
@@ -330,6 +335,7 @@
 				94EC58B8208931A200F48B5E /* ArrayChunkerSpec.swift */,
 				94189C002086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift */,
 				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
+				94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
 				94F1CEE92098D41200D63E00 /* MatrixSortedSearchSpec.swift */,
 				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
@@ -522,6 +528,7 @@
 				94F1CEE82098D3F100D63E00 /* MatrixSortedSearch.swift in Sources */,
 				94189BFF20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift in Sources */,
 				948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */,
+				94F1CEF2209B99F300D63E00 /* Int+Prime.swift in Sources */,
 				947430E1207837CA00C81A4B /* AppDelegate.swift in Sources */,
 				94EC58B72089318E00F48B5E /* ArrayChunker.swift in Sources */,
 				94189C0320881CE400E693A9 /* TreeNode.swift in Sources */,
@@ -541,6 +548,7 @@
 				94F1CEF02098E55800D63E00 /* Array+BinarySearchSpec.swift in Sources */,
 				94CB9A97207FF83B00F6BC1E /* DoublyLinkedListSpec.swift in Sources */,
 				948C93852085936100D7CEBE /* String+MostFrequentCharSpec.swift in Sources */,
+				94F1CEF4209B9A0B00D63E00 /* Int+PrimeSpec.swift in Sources */,
 				94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */,
 				94F1CEEA2098D41200D63E00 /* MatrixSortedSearchSpec.swift in Sources */,
 				940CAD8F208F645D00B88C52 /* ResizableArraySpec.swift in Sources */,
