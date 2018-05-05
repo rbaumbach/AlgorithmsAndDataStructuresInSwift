@@ -59,6 +59,8 @@
 		94F1CEF02098E55800D63E00 /* Array+BinarySearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */; };
 		94F1CEF2209B99F300D63E00 /* Int+Prime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF1209B99F300D63E00 /* Int+Prime.swift */; };
 		94F1CEF4209B9A0B00D63E00 /* Int+PrimeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */; };
+		94F1CEF6209C0D5600D63E00 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF5209C0D5600D63E00 /* Fibonacci.swift */; };
+		94F1CEF8209C0D6F00D63E00 /* FibonacciSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1CEF7209C0D6F00D63E00 /* FibonacciSpec.swift */; };
 		A66B2E5CBDE9B59914CD07A9 /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */; };
 		C590BA6BEE1DA77B146BC6D3 /* Pods_AlgorithmsAndDataStructuresInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065D38C1F3BC485C7B9F927 /* Pods_AlgorithmsAndDataStructuresInSwift.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +136,8 @@
 		94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BinarySearchSpec.swift"; sourceTree = "<group>"; };
 		94F1CEF1209B99F300D63E00 /* Int+Prime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Prime.swift"; sourceTree = "<group>"; };
 		94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+PrimeSpec.swift"; sourceTree = "<group>"; };
+		94F1CEF5209C0D5600D63E00 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		94F1CEF7209C0D6F00D63E00 /* FibonacciSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciSpec.swift; sourceTree = "<group>"; };
 		DAFA4F5C815C33984DA7FF5D /* Pods_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED98151E623575A12B6EF542 /* Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmsAndDataStructuresInSwift/Pods-AlgorithmsAndDataStructuresInSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,6 +277,7 @@
 			children = (
 				94F1CEED2098E25300D63E00 /* Array+BinarySearch.swift */,
 				94CB9A7F207842B000F6BC1E /* BubbleSort.swift */,
+				94F1CEF5209C0D5600D63E00 /* Fibonacci.swift */,
 				94F1CEF1209B99F300D63E00 /* Int+Prime.swift */,
 			);
 			path = Algorithms;
@@ -292,6 +297,7 @@
 				94F1CEEF2098E55800D63E00 /* Array+BinarySearchSpec.swift */,
 				94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */,
 				94F1CEF3209B9A0B00D63E00 /* Int+PrimeSpec.swift */,
+				94F1CEF7209C0D6F00D63E00 /* FibonacciSpec.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 			files = (
 				94CB9AB12084031E00F6BC1E /* Int+Reverse.swift in Sources */,
 				940CAD8D208E960400B88C52 /* ResizableArray.swift in Sources */,
+				94F1CEF6209C0D5600D63E00 /* Fibonacci.swift in Sources */,
 				94F1CEEE2098E25300D63E00 /* Array+BinarySearch.swift in Sources */,
 				94CB9A8E207FF09700F6BC1E /* LinkedList.swift in Sources */,
 				94A39D432094B875003E58F4 /* BinarySearchTreeNode.swift in Sources */,
@@ -565,6 +572,7 @@
 				94CB9A9D20805EA500F6BC1E /* String+ReverseSpec.swift in Sources */,
 				94189C0520881D0300E693A9 /* TreeNodeSpec.swift in Sources */,
 				94CB9AAF2082DB6D00F6BC1E /* String+PalindromeSpec.swift in Sources */,
+				94F1CEF8209C0D6F00D63E00 /* FibonacciSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
