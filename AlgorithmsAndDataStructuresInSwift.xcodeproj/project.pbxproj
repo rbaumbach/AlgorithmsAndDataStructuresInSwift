@@ -224,8 +224,8 @@
 		947430DF207837CA00C81A4B /* AlgorithmsAndDataStructuresInSwift */ = {
 			isa = PBXGroup;
 			children = (
-				94CB9A7C20783DBC00F6BC1E /* Algorithms */,
 				94CB9A7920783D8F00F6BC1E /* AppCode */,
+				94CB9A7C20783DBC00F6BC1E /* Algorithms */,
 				94CB9A9820805D8A00F6BC1E /* Code Challenges */,
 				9447B297207BD6C4009A184E /* Data Structures */,
 				94CB9A7A20783D9A00F6BC1E /* Resources */,
