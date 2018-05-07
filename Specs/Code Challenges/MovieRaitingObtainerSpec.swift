@@ -25,17 +25,40 @@ class MovieRatingObtainerSpec: QuickSpec {
             var inputMovie: Movie!
             var highestSimilarMovies: [Movie]!
             
-            beforeEach {
-                inputMovie = Movie(rating: 5, similiarMovies: [Movie(rating: 6, similiarMovies: [Movie(rating: 7)])])
+            describe("when the movies don't have circular references (movie has similar movies that reference itself)") {
+                beforeEach {
+                    inputMovie = Movie(id: 0, rating: 5, similiarMovies: [Movie(id: 1, rating: 6, similiarMovies: [Movie(id: 2, rating: 7)])])
+                    
+                    highestSimilarMovies = subject.obtainHighestSimiliarMovies(movie: inputMovie, numberOfHighestRatedMovies: 2)
+                }
                 
-                highestSimilarMovies = subject.obtainHighestSimiliarMovies(movie: inputMovie, numberOfHighestRatedMovies: 2)
+                it("returns the correct [Movie] array") {
+                    let expectedHighestSimilarMoviesArray = [Movie(id: 2, rating: 7),
+                                                             Movie(id: 1, rating: 6, similiarMovies: [Movie(id: 2, rating: 7)])]
+                    
+                    expect(highestSimilarMovies).to(equal(expectedHighestSimilarMoviesArray))
+                }
             }
             
-            it("returns the correct [Movie] array") {
-                let expectedHighestSimilarMoviesArray = [Movie(rating: 7),
-                                                         Movie(rating: 6, similiarMovies: [Movie(rating: 7)])]
+            describe("when the movies do have circular references") {
+                var movie1: Movie!
+                var movie2: Movie!
                 
-                expect(highestSimilarMovies).to(equal(expectedHighestSimilarMoviesArray))
+                beforeEach {
+                    movie1 = Movie(id: 55, rating: 9)
+                    movie2 = Movie(id: 66, rating: 2, similiarMovies: [movie1])
+                    
+                    inputMovie = Movie(id: 0, rating: 5, similiarMovies: [movie1, movie2])
+                    
+                    highestSimilarMovies = subject.obtainHighestSimiliarMovies(movie: inputMovie, numberOfHighestRatedMovies: 2)
+                }
+                
+                it("returns the correct [Movie] array") {
+                    let expectedHighestSimilarMoviesArray = [Movie(id: 55, rating: 9, similiarMovies: []),
+                                                             Movie(id: 0, rating: 5, similiarMovies: [movie1, movie2])]
+                    
+                    expect(highestSimilarMovies).to(equal(expectedHighestSimilarMoviesArray))
+                }
             }
         }
     }

@@ -1,20 +1,28 @@
 import UIKit
 
-class Movie: Equatable, Comparable, CustomStringConvertible {
+class Movie: Equatable, Comparable, Hashable, CustomStringConvertible {
     // MARK: - Public Properties
-    
+
+    var id = 0
     var rating = 0
     var similiarMovies: [Movie] = []
     
     // MARK: - <CustomStringConvertible>
     
     var description: String {
-        return "{rating: \(rating)}"
+        return "{id: \(id), rating: \(rating)}"
+    }
+    
+    // MARK: - <Hashable>
+    
+    var hashValue: Int {
+        return id.hashValue ^ rating.hashValue ^ similiarMovies.count
     }
     
     // MARK: - Init Method
     
-    init(rating: Int, similiarMovies: [Movie] = []) {
+    init(id: Int, rating: Int, similiarMovies: [Movie] = []) {
+        self.id = id
         self.rating = rating
         self.similiarMovies = similiarMovies
     }
@@ -22,8 +30,8 @@ class Movie: Equatable, Comparable, CustomStringConvertible {
     // MARK: - <Equatable>
     
     static func == (lhs: Movie, rhs: Movie) -> Bool {
-        return lhs.rating == rhs.rating &&
-               lhs.similiarMovies == rhs.similiarMovies
+        return lhs.id == rhs.id &&
+               lhs.rating == rhs.rating
     }
     
     // MARK: - <Comparable>
@@ -37,39 +45,31 @@ class MovieRatingObtainer {
     // MARK: - Public Methods
     
     func obtainHighestSimiliarMovies(movie: Movie, numberOfHighestRatedMovies: Int) -> [Movie] {
-        // First, we want to build an array of all the movies
+        var movieSet: Set<Movie> = Set<Movie>()
+        movieSet.insert(movie)
         
-        var allMovies: [Movie] = [movie]
+        obtainHighestSimiliarMovies(movie: movie, movieSet: &movieSet)
         
-        obtainHighestSimiliarMovies(movie: movie, finalMovieOutput: &allMovies)
+        var allMoviesArray = Array(movieSet)
         
-        // Once we have an array of all the movies, let's sort them in descending order
-        
-        allMovies.sort { lhs, rhs in
+        allMoviesArray.sort { lhs, rhs in
             return rhs < lhs
         }
         
-        // Now that the array is in descending order, let's only return the elements from 0 upto numberOfHighestRatedMovies (n) [0..<numberOfHighestRatedMovies]
-        
-        return Array(allMovies[0..<numberOfHighestRatedMovies])
+        return Array(allMoviesArray[0..<numberOfHighestRatedMovies])
     }
     
     // MARK: - Private Methods
     
-    func obtainHighestSimiliarMovies(movie: Movie, finalMovieOutput: inout [Movie]) {
-        // kick out when movie doesn't have any similiar movies
-        
+    func obtainHighestSimiliarMovies(movie: Movie, movieSet: inout Set<Movie>) {
         if movie.similiarMovies == [] {
             return
         }
         
-        // Iterate through all movies to add to final array, and then recursively do this
-        // with all of that movies similiar movies
-        
         movie.similiarMovies.forEach { movie in
-            finalMovieOutput.append(movie)
+            movieSet.insert(movie)
             
-            obtainHighestSimiliarMovies(movie: movie, finalMovieOutput: &finalMovieOutput)
+            obtainHighestSimiliarMovies(movie: movie, movieSet: &movieSet)
         }
     }
 }
