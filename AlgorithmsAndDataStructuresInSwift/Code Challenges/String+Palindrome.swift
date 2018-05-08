@@ -39,7 +39,7 @@ extension String {
     
     // MARK: - Private Methods
     
-    func removeCharacters(from forbiddenChars: CharacterSet) -> String {
+    private func removeCharacters(from forbiddenChars: CharacterSet) -> String {
         let sanitizedUnicodeScalarView = unicodeScalars.filter { unicodeScalar in
             !forbiddenChars.contains(unicodeScalar)
         }

@@ -28,6 +28,10 @@
 		948C93852085936100D7CEBE /* String+MostFrequentCharSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */; };
 		94901A6120A0F6EB00D6CCCC /* MovieRatingObtainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6020A0F6EB00D6CCCC /* MovieRatingObtainer.swift */; };
 		94901A6320A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6220A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift */; };
+		94901A6520A1149F00D6CCCC /* String+SentenceWordReverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6420A1149F00D6CCCC /* String+SentenceWordReverse.swift */; };
+		94901A6720A114E000D6CCCC /* String+SentenceWordReverseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6620A114E000D6CCCC /* String+SentenceWordReverseSpec.swift */; };
+		94901A6920A115A000D6CCCC /* String+NumberOfWordsFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6820A115A000D6CCCC /* String+NumberOfWordsFound.swift */; };
+		94901A6B20A115D100D6CCCC /* String+NumberOfWordsFoundSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A6A20A115D100D6CCCC /* String+NumberOfWordsFoundSpec.swift */; };
 		94A39D432094B875003E58F4 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */; };
 		94A39D452094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */; };
 		94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A7F207842B000F6BC1E /* BubbleSort.swift */; };
@@ -105,6 +109,10 @@
 		948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MostFrequentCharSpec.swift"; sourceTree = "<group>"; };
 		94901A6020A0F6EB00D6CCCC /* MovieRatingObtainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRatingObtainer.swift; sourceTree = "<group>"; };
 		94901A6220A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRaitingObtainerSpec.swift; sourceTree = "<group>"; };
+		94901A6420A1149F00D6CCCC /* String+SentenceWordReverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SentenceWordReverse.swift"; sourceTree = "<group>"; };
+		94901A6620A114E000D6CCCC /* String+SentenceWordReverseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SentenceWordReverseSpec.swift"; sourceTree = "<group>"; };
+		94901A6820A115A000D6CCCC /* String+NumberOfWordsFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NumberOfWordsFound.swift"; sourceTree = "<group>"; };
+		94901A6A20A115D100D6CCCC /* String+NumberOfWordsFoundSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NumberOfWordsFoundSpec.swift"; sourceTree = "<group>"; };
 		94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
 		94BE916220783BF100597B82 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,8 +343,10 @@
 				94901A6020A0F6EB00D6CCCC /* MovieRatingObtainer.swift */,
 				948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */,
 				948C93822085934E00D7CEBE /* String+MostFrequentChar.swift */,
+				94901A6820A115A000D6CCCC /* String+NumberOfWordsFound.swift */,
 				94CB9AAC2082DAB700F6BC1E /* String+Palindrome.swift */,
 				94CB9A9920805E6A00F6BC1E /* String+Reverse.swift */,
+				94901A6420A1149F00D6CCCC /* String+SentenceWordReverse.swift */,
 			);
 			path = "Code Challenges";
 			sourceTree = "<group>";
@@ -352,8 +362,10 @@
 				94901A6220A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift */,
 				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
 				948C93842085936100D7CEBE /* String+MostFrequentCharSpec.swift */,
+				94901A6A20A115D100D6CCCC /* String+NumberOfWordsFoundSpec.swift */,
 				94CB9AAE2082DB6D00F6BC1E /* String+PalindromeSpec.swift */,
 				94CB9A9C20805EA500F6BC1E /* String+ReverseSpec.swift */,
+				94901A6620A114E000D6CCCC /* String+SentenceWordReverseSpec.swift */,
 			);
 			path = "Code Challenges";
 			sourceTree = "<group>";
@@ -542,6 +554,8 @@
 				94189BFF20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift in Sources */,
 				948C93832085934E00D7CEBE /* String+MostFrequentChar.swift in Sources */,
 				94F1CEF2209B99F300D63E00 /* Int+Prime.swift in Sources */,
+				94901A6920A115A000D6CCCC /* String+NumberOfWordsFound.swift in Sources */,
+				94901A6520A1149F00D6CCCC /* String+SentenceWordReverse.swift in Sources */,
 				947430E1207837CA00C81A4B /* AppDelegate.swift in Sources */,
 				94EC58B72089318E00F48B5E /* ArrayChunker.swift in Sources */,
 				94189C0320881CE400E693A9 /* TreeNode.swift in Sources */,
@@ -569,10 +583,12 @@
 				94901A6320A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift in Sources */,
 				94CB9A88207EC32A00F6BC1E /* SinglyLinkedListSpec.swift in Sources */,
 				94189C09208821B700E693A9 /* TreeSpec.swift in Sources */,
+				94901A6B20A115D100D6CCCC /* String+NumberOfWordsFoundSpec.swift in Sources */,
 				948C938120856E6000D7CEBE /* ReverseIntToStringSpec.swift in Sources */,
 				94CB9AB32084032E00F6BC1E /* Int+ReverseSpec.swift in Sources */,
 				94CB9AA120813A2100F6BC1E /* StackSpec.swift in Sources */,
 				94CB9A94207FF2A500F6BC1E /* DoubleNodeSpec.swift in Sources */,
+				94901A6720A114E000D6CCCC /* String+SentenceWordReverseSpec.swift in Sources */,
 				94CB9A8C207EC37000F6BC1E /* SingleNodeSpec.swift in Sources */,
 				94EC58B9208931A200F48B5E /* ArrayChunkerSpec.swift in Sources */,
 				94A39D452094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift in Sources */,
