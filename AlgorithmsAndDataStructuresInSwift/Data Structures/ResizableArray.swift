@@ -3,7 +3,7 @@ import Foundation
 class ResizableArray {
     // MARK: - Read only Properties
     
-    private(set) var backingArray: [Int?] = Array(repeating: nil, count: 1)
+    private(set) var backingArray: [Int?] = [nil]
     
     private(set) var count = 0
     
