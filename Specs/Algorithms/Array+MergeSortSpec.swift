@@ -22,5 +22,19 @@ class Array_MergeSortSpec: QuickSpec {
                 expect(subject).to(equal(expectedArray))
             }
         }
+        
+        describe("mergeSort()") {
+            var mergedArray: [Int]!
+            
+            beforeEach {
+                mergedArray = Array<Int>.mergeSort(subject)
+            }
+            
+            it("sorts the subject") {
+                let expectedArray = [-100, -99, -1, 3, 5, 10, 22, 25, 100, 800]
+                
+                expect(mergedArray).to(equal(expectedArray))
+            }
+        }
     }
 }

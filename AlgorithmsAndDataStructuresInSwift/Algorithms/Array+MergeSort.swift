@@ -7,6 +7,12 @@ extension Array where Element: Comparable  {
         mergeSort(start: 0, end: self.count)
     }
     
+    static func mergeSort(_ inputArray: Array) -> Array {
+        var mutableInputArray = inputArray
+        
+        return Array<Element>.mergeSort(&mutableInputArray)
+    }
+    
     // MARK: - Private Methods
     
     private mutating func mergeSort(start: Int, end: Int) {
@@ -50,6 +56,39 @@ extension Array where Element: Comparable  {
             
             originalArrayStartIndex += 1
         }
+    }
+    
+    private static func mergeSort(_ inputArray: inout Array) -> Array {
+        if inputArray.count < 2 {
+            return inputArray
+        }
+        
+        let midPointOfInput = inputArray.count / 2
+        
+        var leftArray = Array(inputArray[0..<midPointOfInput])
+        var rightArray = Array(inputArray[midPointOfInput..<inputArray.count])
+        
+        return merge(leftArray: mergeSort(&leftArray), rightArray: mergeSort(&rightArray))
+    }
+    
+    private static func merge(leftArray: Array, rightArray: Array) -> Array {
+        var left = leftArray
+        var right = rightArray
+        
+        var mergedArray: Array = []
+        
+        while left.count != 0 && right.count != 0 {
+            if left[0] < right[0] {
+                mergedArray.append(left.removeFirst())
+            } else {
+                mergedArray.append(right.removeFirst())
+            }
+        }
+        
+        mergedArray += left
+        mergedArray += right
+        
+        return mergedArray
     }
 }
 
