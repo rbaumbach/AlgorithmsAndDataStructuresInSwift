@@ -36,6 +36,8 @@
 		94901A9B20A3CCD500D6CCCC /* Array+MergeSortSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94901A9A20A3CCD500D6CCCC /* Array+MergeSortSpec.swift */; };
 		94A39D432094B875003E58F4 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */; };
 		94A39D452094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */; };
+		94BCC3D320A4BEC500080095 /* LargestSequentialFloatIncrease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BCC3D220A4BEC500080095 /* LargestSequentialFloatIncrease.swift */; };
+		94BCC3D520A4BEEF00080095 /* LargestSequentialFloatIncreaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BCC3D420A4BEEF00080095 /* LargestSequentialFloatIncreaseSpec.swift */; };
 		94CB9A80207842B000F6BC1E /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A7F207842B000F6BC1E /* BubbleSort.swift */; };
 		94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A8120787E8600F6BC1E /* BubbleSortSpec.swift */; };
 		94CB9A84207EC30300F6BC1E /* SinglyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A83207EC30300F6BC1E /* SinglyLinkedList.swift */; };
@@ -119,6 +121,8 @@
 		94901A9A20A3CCD500D6CCCC /* Array+MergeSortSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MergeSortSpec.swift"; sourceTree = "<group>"; };
 		94A39D422094B875003E58F4 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		94A39D442094B8A0003E58F4 /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
+		94BCC3D220A4BEC500080095 /* LargestSequentialFloatIncrease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestSequentialFloatIncrease.swift; sourceTree = "<group>"; };
+		94BCC3D420A4BEEF00080095 /* LargestSequentialFloatIncreaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargestSequentialFloatIncreaseSpec.swift; sourceTree = "<group>"; };
 		94BE916220783BF100597B82 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BE916620783BF100597B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CB9A7F207842B000F6BC1E /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
@@ -345,6 +349,7 @@
 				94189BFE20869DBE00E693A9 /* AsyncEvenOddStringConcatenation.swift */,
 				948C9376208443CA00D7CEBE /* FizzBuzz.swift */,
 				94CB9AB02084031E00F6BC1E /* Int+Reverse.swift */,
+				94BCC3D220A4BEC500080095 /* LargestSequentialFloatIncrease.swift */,
 				94F1CEE72098D3F100D63E00 /* MatrixSortedSearch.swift */,
 				94901A6020A0F6EB00D6CCCC /* MovieRatingObtainer.swift */,
 				948C937E20856DDB00D7CEBE /* ReverseIntToString.swift */,
@@ -364,6 +369,7 @@
 				94189C002086A92100E693A9 /* AsyncEvenOddStringConcatenationSpec.swift */,
 				948C9378208443E700D7CEBE /* FizzBuzzSpec.swift */,
 				94CB9AB22084032E00F6BC1E /* Int+ReverseSpec.swift */,
+				94BCC3D420A4BEEF00080095 /* LargestSequentialFloatIncreaseSpec.swift */,
 				94F1CEE92098D41200D63E00 /* MatrixSortedSearchSpec.swift */,
 				94901A6220A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift */,
 				948C938020856E6000D7CEBE /* ReverseIntToStringSpec.swift */,
@@ -551,6 +557,7 @@
 				94189C07208821A200E693A9 /* Tree.swift in Sources */,
 				94CB9A9A20805E6A00F6BC1E /* String+Reverse.swift in Sources */,
 				948C9377208443CA00D7CEBE /* FizzBuzz.swift in Sources */,
+				94BCC3D320A4BEC500080095 /* LargestSequentialFloatIncrease.swift in Sources */,
 				94CB9A90207FF28500F6BC1E /* DoublyLinkedList.swift in Sources */,
 				947430E3207837CA00C81A4B /* ViewController.swift in Sources */,
 				94CB9A92207FF29400F6BC1E /* DoubleNode.swift in Sources */,
@@ -587,6 +594,7 @@
 				94F1CEF4209B9A0B00D63E00 /* Int+PrimeSpec.swift in Sources */,
 				94CB9A8220787E8600F6BC1E /* BubbleSortSpec.swift in Sources */,
 				94F1CEEA2098D41200D63E00 /* MatrixSortedSearchSpec.swift in Sources */,
+				94BCC3D520A4BEEF00080095 /* LargestSequentialFloatIncreaseSpec.swift in Sources */,
 				940CAD8F208F645D00B88C52 /* ResizableArraySpec.swift in Sources */,
 				94901A6320A0F70800D6CCCC /* MovieRaitingObtainerSpec.swift in Sources */,
 				94CB9A88207EC32A00F6BC1E /* SinglyLinkedListSpec.swift in Sources */,
