@@ -60,7 +60,6 @@ class AscendingValueDetector<T: Comparable>: NSObject {
         var i = 0
         
         while i < input.count - 1 {
-            print("Value: \(input[i])")
             if startIndex == -1 && input[i] < input[i + 1] {
                 startIndex = i
                 endIndex = i + 1
