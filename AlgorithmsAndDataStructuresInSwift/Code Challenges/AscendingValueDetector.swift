@@ -1,9 +1,9 @@
 import UIKit
 
-class AscendingValueDetector: NSObject {
+class AscendingValueDetector<T: Comparable>: NSObject {
     // MARK: - Public Methods
     
-    func findFirst(input: [String]) -> [Int] {
+    func findFirst(input: [T]) -> [Int] {
         var startIndex = -1
         
         var i = 0
@@ -25,7 +25,7 @@ class AscendingValueDetector: NSObject {
         return []
     }
     
-    func findFirstTake2(input: [String]) -> [Int] {
+    func findFirstTake2(input: [T]) -> [Int] {
         var startIndex = -1
         var endIndex = -1
         
@@ -51,7 +51,7 @@ class AscendingValueDetector: NSObject {
         return []
     }
     
-    func find(input: [String]) -> [[String: Int]] {
+    func find(input: [T]) -> [[String: Int]] {
         var allascensions: [[String: Int]] = []
         
         var startIndex = -1

@@ -14,10 +14,10 @@ class AscendingValueDetectorSpec: QuickSpec {
     override func spec() {
         var inputArray: [String]!
         
-        var subject: AscendingValueDetector!
+        var subject: AscendingValueDetector<String>!
         
         beforeEach {
-            subject = AscendingValueDetector()
+            subject = AscendingValueDetector<String>()
         }
         
         describe("#findFirst(input:)") {
