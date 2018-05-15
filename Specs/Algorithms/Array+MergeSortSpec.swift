@@ -23,7 +23,7 @@ class Array_MergeSortSpec: QuickSpec {
             }
         }
         
-        describe("mergeSort()") {
+        describe("mergeSort(_:)") {
             var mergedArray: [Int]!
             
             beforeEach {
