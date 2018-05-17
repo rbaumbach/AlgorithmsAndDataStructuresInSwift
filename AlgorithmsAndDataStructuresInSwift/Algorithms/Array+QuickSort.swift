@@ -7,7 +7,9 @@ extension Array where Element: Comparable {
         quickSort(start: 0, end: self.count)
     }
     
-    mutating func quickSort(start: Int, end: Int) {
+    // MARK: - Private Methods
+    
+    private mutating func quickSort(start: Int, end: Int) {
         if end <= start {
             return
         }
@@ -18,22 +20,22 @@ extension Array where Element: Comparable {
         quickSort(start: partitionIndex + 1, end: end)
     }
     
-    mutating func partition(start: Int, end: Int) -> Int {
+    private mutating func partition(start: Int, end: Int) -> Int {
         var leftIndex = start
         var rightIndex = end
         
-        let partitionValue = self[start] as! Int
+        let partitionValue = self[start]
         
         while leftIndex < rightIndex {
             leftIndex += 1
             
-            while leftIndex < end && (self[leftIndex] as! Int) < partitionValue {
+            while leftIndex < end && self[leftIndex] < partitionValue {
                 leftIndex += 1
             }
             
             rightIndex -= 1
             
-            while rightIndex > start && (self[rightIndex] as! Int) > partitionValue {
+            while rightIndex > start && self[rightIndex] > partitionValue {
                 rightIndex -= 1
             }
             
@@ -43,12 +45,10 @@ extension Array where Element: Comparable {
         }
         
         self[start] = self[rightIndex]
-        self[rightIndex] = partitionValue as! Element
+        self[rightIndex] = partitionValue
         
         return rightIndex
     }
-    
-    // MARK: - Private Methods
     
     private mutating func swap(index1: Int, index2: Int) {
         let temp = self[index1]

@@ -5,7 +5,7 @@ import Nimble
 
 class Array_QuickSortSpec: QuickSpec {
     override func spec() {
-        var subject: Array<Int>!
+        var subject: [Int]!
         
         describe("quickSort()") {
             it("sorts the subject") {
