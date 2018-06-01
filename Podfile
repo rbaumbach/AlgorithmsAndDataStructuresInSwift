@@ -4,10 +4,10 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'AlgorithmsAndDataStructuresInSwift' do
-  pod 'SwiftLint', '0.25.0'
+  pod 'SwiftLint'
 end
 
 target 'Specs' do
-  pod 'Quick', '1.2.0'
-  pod 'Nimble', '7.0.3'
+  pod 'Quick'
+  pod 'Nimble'
 end
